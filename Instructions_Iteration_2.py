@@ -12,10 +12,12 @@ instructions = "This program is called the Recipe Cost Calculator. It has been d
 tutorial = input("Have you used this program before? ")
 #  skips instructions if the user has used program before
 if tutorial.lower() == "yes" or tutorial.lower() == "y":
-  recipe = input("What is your recipe called?")
+  recipe = input("What is your recipe called? ")
   recipe_name.append(recipe)
-  serving = input(int("what size are the servings you are making?"))
-  serving_size.append(serving)
+  serving = input("what size are the servings you are making? ")
+  serving_size.append(int(serving))
 #  gives instructions if the user has not used program before
 elif tutorial.lower() == "no" or tutorial.lower() == "n":
   print(instructions)
+
+print(recipe_name, serving_size)
