@@ -1,7 +1,7 @@
 #  Instructions for Recipe Cost (Iteration 2)
 #  By Eden Cave
 #  11/11/2022
-#  Version 1
+#  Version 4
 
 #  Stores values for later use
 recipe_name = []
@@ -12,9 +12,13 @@ instructions = "This program is called the Recipe Cost Calculator. It has been d
 tutorial = input("Have you used this program before? ")
 #  skips instructions if the user has used program before
 if tutorial.lower() == "yes" or tutorial.lower() == "y":
+  #  asks for recipe name
   recipe = input("What is your recipe called? ")
+  #  stores recipe name
   recipe_name.append(recipe)
+  #  asks for serving size
   serving = input("what size are the servings you are making? ")
+  #  stores srving size
   serving_size.append(int(serving))
 #  gives instructions if the user has not used program before
 elif tutorial.lower() == "no" or tutorial.lower() == "n":

@@ -1,7 +1,7 @@
 #  Ingredients List for recipe cost
 #  By Eden Cave
 #  13/11/2022
-#  Version 5
+#  Version 4
 
 #  set up for ingredients list and exit code
 exit_code = False
@@ -15,7 +15,7 @@ while exit_code == False:
   if ingredient_name == "xxx":
     exit_code = True
   #  checks that ingredient name isn't a number
-  if type(ingredient_name) != str:
+  if ingredient_name != str():
     print("Error: please enter a valid string")
     break
   else:
