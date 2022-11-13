@@ -1,7 +1,7 @@
 #  Ingredients List for recipe cost
 #  By Eden Cave
 #  13/11/2022
-#  Version 5
+#  Version 6
 
 #  set up for ingredients list and exit code
 exit_code = False
@@ -27,7 +27,7 @@ while exit_code == False:
   if amount_needed == "xxx":
     exit_code = True
   #  checks that amount needed is a whole number
-  if amount_needed != int():
+  if type(amount_needed) != int:
     print("Error: please enter a valid number")
     break
   #  prevents invalid inputs from being added to list
@@ -40,7 +40,7 @@ while exit_code == False:
   if price == "xxx":
     exit_code = True
   #  checks that the price is a float (decimal number)
-  if price != float():
+  if type(price) != float:
     print("Error: please enter a valid number")
     break
   else:
@@ -52,7 +52,7 @@ while exit_code == False:
   if amount_sold == "xxx":
     exit_code = True
   #  checks that the amount sold is a whole number
-  if amount_sold != int():
+  if type(amount_sold) != int:
     print("Error: please enter a valid number")
     break
   else:
