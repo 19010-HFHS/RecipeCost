@@ -18,6 +18,6 @@ while exit_code != True:
   #  asks user for amount the ingredient is sold as
   amount_sold_as = int(input("Please enter amount the ingredient is sold as: "))
   #  does the mathmatical calculations
-  base_price = (amount_sold_as / cost)
+  base_price = (cost / amount_sold_as)
   result = (base_price * amount_required)
-  print("2d%" % result)
+  print("%.2f" % result)
