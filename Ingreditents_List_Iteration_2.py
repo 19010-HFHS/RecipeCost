@@ -8,7 +8,7 @@ exit_code = False
 ingredient_named = []
 amount_required = []
 cost = []
-amount_sells = []
+amount_sold_as = []
 
 #  asks for user input
 while exit_code == False:
@@ -55,11 +55,11 @@ while exit_code == False:
     print("Error: please enter a valid number")
     break
   else:
-    amount_sells.append(amount_sold)
+    amount_sold_as.append(amount_sold)
 
 # ends program and prints results
 if exit_code == True:
   print(ingredient_named)
   print(amount_required)
   print(cost)
-  print(amount_sells)
+  print(amount_sold_as)
