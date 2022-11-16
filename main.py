@@ -1,13 +1,14 @@
 #  Amount and Cost for Recipe Cost
 #  By Eden Cave
 #  15/11/2022
-#  version 1
+#  version 2
 
 #  stores values for later
 amount_required = ""
 cost = ""
 amount_sold_as = ""
 exit_code = False
+result = []
 
 #  asks for user input
 while exit_code != True:
@@ -20,4 +21,5 @@ while exit_code != True:
   #  does the mathmatical calculations
   base_price = (cost / amount_sold_as)
   result = (base_price * amount_required)
-  print("%.2f" % result)
+  ingredient_cost = "%.2f" % result
+  print(ingredient_cost)
