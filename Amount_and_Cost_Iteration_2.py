@@ -4,14 +4,18 @@
 #  version 1
 
 #  stores values for later
+serving_size = input("what size are the servings you are making?: ")
 amount_required = ""
 cost = ""
 amount_sold_as = ""
 exit_code = False
-result = []
+ingredient_costs = []
+
 
 #  asks for user input
 while exit_code != True:
+
+
   #  asks user for amount required
   try:
     amount_required = int(input("Please enter an amount required: "))
@@ -35,3 +39,17 @@ while exit_code != True:
   result = (base_price * amount_required)
   ingredient_cost = "%.2f" % result
   print(ingredient_cost)
+  ingredient_costs.append(ingredient_cost)
+  
+  #  asks if user whats to enter more variables or see results
+  repeat = input("Would you like to continue?: ")  
+  if repeat.lower() == "yes" or repeat.lower() == "y":
+    continue
+  if repeat.lower() == "no" or repeat.lower() == "n":
+    exit_code = True
+  
+while exit_code == True:
+  total_cost = sum(ingredient_costs)
+  print(total_cost)
+  serving_cost = (total_cost / serving_size)
+  print(serving_cost)
