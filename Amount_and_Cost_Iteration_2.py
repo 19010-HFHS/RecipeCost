@@ -1,7 +1,7 @@
 #  Amount and Cost for Recipe Cost (Iteration 2)
 #  By Eden Cave
 #  16/11/2022
-#  version 1
+#  version 2
 
 #  stores values for later
 serving_size = input("what size are the servings you are making?: ")
@@ -34,7 +34,7 @@ while exit_code != True:
   except:
     print("please enter a whole number")
     break
-  #  does the mathmatical calculations
+  #  does the mathematical calculations
   base_price = (cost / amount_sold_as)
   result = (base_price * amount_required)
   ingredient_cost = "%.2f" % result

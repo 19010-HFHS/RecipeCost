@@ -30,7 +30,7 @@ while exit_code != True:
   except:
     print("please enter a whole number")
     break
-  #  does the mathmatical calculations
+  #  does the mathematical calculations
   base_price = (cost / amount_sold_as)
   result = (base_price * amount_required)
   ingredient_cost = "%.2f" % result
