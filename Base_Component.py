@@ -1,7 +1,7 @@
 #  Base Component for Recipe Cost
 #  By Eden Cave
 #  11/11/2022
-#  version 2
+#  Version 3
 
 #  defines tutorial function
 def tutorial(question):

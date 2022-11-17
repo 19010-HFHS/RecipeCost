@@ -1,11 +1,10 @@
 #  Amount and Cost for Recipe Cost (Iteration 2)
 #  By Eden Cave
 #  16/11/2022
-#  version 2
+#  Version 2
 
 #  stores values for later
 amount_required = ""
-cost = ""
 amount_sold_as = ""
 exit_code = False
 result = []
