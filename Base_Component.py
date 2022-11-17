@@ -16,10 +16,6 @@ def tutorial(question):
     recipe = input("What is your recipe called? ")
     #  stores recipe name
     recipe_name.append(recipe)
-    #  asks for serving size
-    serving = input("what size are the servings you are making? ")
-    #  stores srving size
-    serving_size.append(float(serving))
   #  gives instructions if the user has not used program before
   elif yes_no.lower() == "no" or yes_no.lower() == "n":
     print(instructions)
@@ -27,24 +23,22 @@ def tutorial(question):
     recipe = input("\nWhat is your recipe called? ")
     #  stores recipe name
     recipe_name.append(recipe)
-    #  asks for serving size
-    serving = input("what size are the servings you are making? ")
-    #  stores srving size
-    serving_size.append(float(serving))
   
 #  Main Routine
 
 #  Stores values for later use
 intro = ""
 recipe_name = []
-serving_size = []
 exit_code = False
 ingredient_costs = []
 
+#  asks if the user requires a tutorial
+intro = tutorial("Have you used this program before?: ")
+#  asks for serving size
+serving_size = float(input("what size are the servings you are making? "))
+
 #  Main loop
 while exit_code == False:
-  #  asks if the user requires a tutorial
-  intro = tutorial("Have you used this program before?: ")
   
   #  asks for name of ingredient, stores answer and checks for exit code
   try:
@@ -84,7 +78,7 @@ while exit_code == False:
   result = (base_price * amount_required)
   ingredient_cost = "%.2f" % result
   print(ingredient_cost)
-  ingredient_costs.append(ingredient_cost)
+  ingredient_costs.append(float(ingredient_cost))
 
   #  asks if user whats to enter more variables or see results
   repeat = input("Would you like to continue?: ")  
