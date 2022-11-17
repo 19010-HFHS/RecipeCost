@@ -22,5 +22,6 @@ while exit_code == False:
     break
 #  displays user input
 while exit_code == True:
-  print("Total Cost:", total_cost)
-  print("Cost Per Serving:", serving_cost)
+  print(str("Total Cost:", total_cost))
+  print(str("Cost Per Serving:", serving_cost))
+  break
