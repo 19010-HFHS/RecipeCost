@@ -1,7 +1,7 @@
 #  Base Component for Recipe Cost
 #  By Eden Cave
 #  11/11/2022
-#  Version 3
+#  Version 4
 
 #  defines tutorial function
 def tutorial(question):
@@ -96,6 +96,7 @@ while exit_code == False:
 #  displays final results
 while exit_code == True:
   total_cost = sum(ingredient_costs)
-  print(total_cost)
+  print("\nTotal Cost:\n$" + str(total_cost))
   serving_cost = (total_cost / serving_size)
-  print(serving_cost)
+  print("\n---Cost Per Serving---\n$" + str(serving_cost))
+  break
