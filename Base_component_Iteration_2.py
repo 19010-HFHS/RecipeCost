@@ -1,7 +1,7 @@
-#  Base Component for Recipe Cost
+#  Base Component for Recipe Cost (Iteration 2)
 #  By Eden Cave
 #  11/11/2022
-#  Version 4
+#  Version 1
 
 #  defines tutorial function
 def tutorial(question):
@@ -23,7 +23,21 @@ def tutorial(question):
     recipe = input("\nWhat is your recipe called? ")
     #  stores recipe name
     recipe_name.append(recipe)
-  
+
+#  defines the boundary case question 
+def bc_question(question):
+  #  asks for feedback
+  feedback = input(question)
+  #  response if feedback is positive
+  if feedback > 5:
+    print("Wow! Thanks for the great feedback!")
+  #  response if feedback is nuetral
+  if feedback == 5:
+    print("Thank you for your feedback!")
+  #  response if feedback is negative
+  if feedback < 5:
+    ("Thank you for your feedback, I will work harder next time.")
+
 #  Main Routine
 
 #  Stores values for later use
@@ -92,6 +106,7 @@ while exit_code == True:
   total_cost = sum(ingredient_costs)
   print("\nTotal Cost:\n$" + str(total_cost))
   serving_cost = (total_cost / serving_size)
-  serving = "%.2f" % serving_cost
-  print("\n---Cost Per Serving---\n$" + str(serving))
+  print("\n---Cost Per Serving---\n$" + str(serving_cost))
   break
+
+end_score = bc_question("On ascale of 1 to 10, how good was this program?: ")
